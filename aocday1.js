@@ -113,7 +113,7 @@ function totalFuelOnce() {
 	for (item of modules) {
 		total += calculateFuelOnce(item);
 	}
-	return console.log("Total: " + total);
+	console.log("Total: " + total);
 }
 
 totalFuelOnce(); //3380880 - Answer to Day 1 Part 1.
