@@ -108,23 +108,6 @@ let modules = [
 
 const calculateFuelOnce = num => Math.floor((num / 3) - 2);
 
-function totalFuelOnce() {
-	let total = 0;
-	for (item of modules) {
-		total += calculateFuelOnce(item);
-	}
-	console.log("Total: " + total);
-}
-
-totalFuelOnce(); //3380880 - Answer to Day 1 Part 1.
-
-//Day 2 Part 2:
-//So, the total fuel required for a module of mass 1969 is:
-//654 + 216 + 70 + 21 + 5 = 966.
-//Then add up all the fuel requirements for each module.
-//Add up the total fuel.
-//console.log(Math.floor((5 / 3) - 2)); //After 5, it goes negative.
-
 function storeAnswer(num) {
     let quotient = calculateFuelOnce(num);
 	let quotient2 = calculateFuelOnce(quotient);
@@ -142,19 +125,22 @@ function storeAnswer(num) {
 		return arr[1] + arr[2] + arr[3] + arr[4] + arr[5] + arr[6] +
 		arr[7] + arr[8];
 	} else {
-    return arr[1] + arr[2] + arr[3] + arr[4] + arr[5] + arr[6] +
-	arr[7] + arr[8] + arr[9];
-}
+		return arr[1] + arr[2] + arr[3] + arr[4] + arr[5] + arr[6] +
+		arr[7] + arr[8] + arr[9];
+	}
 }
 
 function totalFuelRequirements() {
 	let total = 0;
+	let total2 = 0;
 	let addUpAllTheFuel = 0;
 	for (item of modules) {
-		let addUpAllTheFuel = storeAnswer(item);
-		total += addUpAllTheFuel;
+		addUpAllTheFuel = storeAnswer(item);
+		total += calculateFuelOnce(item);
+		total2 += addUpAllTheFuel;
 	}
-	console.log("Total fuel requirements: " + total);
+	console.log("Total - part 1: " + total);
+	console.log("Total fuel requirements - part 2: " + total2);
 }
 
-totalFuelRequirements(); //5068454 - Answer to Day 1 Part 2.
+totalFuelRequirements();
