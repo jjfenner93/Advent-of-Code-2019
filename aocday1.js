@@ -2,6 +2,7 @@
 //~Christmas 2019 - Advent of Code:~
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //Day 1 Part 1 & 2:
+"use strict";
 
 let modules = [
 74819,
@@ -131,6 +132,7 @@ function storeAnswer(num) {
 }
 
 function totalFuelRequirements() {
+	let item;
 	let total = 0;
 	let total2 = 0;
 	let addUpAllTheFuel = 0;
