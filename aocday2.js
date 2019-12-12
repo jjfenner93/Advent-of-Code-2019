@@ -22,3 +22,20 @@ function day2() {
 }
 
 day2();
+
+function day1() {
+	fs.readFile("./day1.txt", "utf-8", (err, data) => {
+		const modules = data.toString();
+		const modulesArray = modules.split(",");
+		const answer = modulesArray.reduce((total, num, index, arr) => {
+				return arr;
+		}, null).find((item) => {
+			if (item > "0") {
+				return item;
+			}
+		});
+		console.log(answer);
+});
+}
+
+day1();
