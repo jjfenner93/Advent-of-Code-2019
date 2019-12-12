@@ -3,6 +3,7 @@
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //Day 1:
 
+//Example copy.
 const fs = require("fs");
 
 function day1Year2015() {
