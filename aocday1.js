@@ -4,111 +4,10 @@
 //Day 1 Part 1 & 2:
 "use strict";
 
-let modules = [
-74819,
-111192,
-104476,
-53965,
-89875,
-147914,
-120203,
-73658,
-80054,
-75468,
-88811,
-73140,
-90128,
-51639,
-70417,
-102818,
-106523,
-77151,
-118711,
-146183,
-143477,
-89008,
-67987,
-94512,
-98199,
-118483,
-91978,
-53595,
-144819,
-130211,
-103326,
-113805,
-50204,
-138909,
-113345,
-142697,
-121281,
-128132,
-98383,
-127929,
-88562,
-135418,
-65123,
-94330,
-107136,
-85822,
-86208,
-93398,
-110176,
-143538,
-98851,
-56280,
-84734,
-52873,
-51898,
-66332,
-91624,
-75662,
-125892,
-137867,
-114748,
-124360,
-81075,
-140638,
-77417,
-86881,
-50250,
-131326,
-88877,
-141095,
-147701,
-103934,
-101008,
-140186,
-117845,
-149923,
-138631,
-93188,
-74299,
-89504,
-75185,
-72688,
-53057,
-50200,
-124950,
-110233,
-114558,
-94047,
-112376,
-122374,
-115571,
-136289,
-115146,
-80924,
-140787,
-125638,
-99960,
-61024,
-138366,
-127943
-];
+const fs = require("fs");
 
 const calculateFuelOnce = num => Math.floor((num / 3) - 2);
-
+/*
 function storeAnswer(num) {
     let quotient = calculateFuelOnce(num);
 	let quotient2 = calculateFuelOnce(quotient);
@@ -134,15 +33,33 @@ function storeAnswer(num) {
 function totalFuelRequirements() {
 	let item;
 	let total = 0;
-	let total2 = 0;
 	let addUpAllTheFuel = 0;
 	for (item of modules) {
 		addUpAllTheFuel = storeAnswer(item);
-		total += calculateFuelOnce(item);
-		total2 += addUpAllTheFuel;
+		total += addUpAllTheFuel;
 	}
-	console.log("Total - part 1: " + total);
-	console.log("Total fuel requirements - part 2: " + total2);
+	setTimeout(() => {console.log(`Total - part 2 is: ${total}`)}, 1000);
 }
 
 totalFuelRequirements();
+*/
+
+function day1() {
+	fs.readFile("./day1.txt", "utf-8", (err, data) => {
+		const modules = data.toString().split("\n");
+		const answer1 = modules.reduce((acc, currentValue, currentIndex, arr) => {
+		currentValue = parseInt(currentValue);
+		let total = acc + calculateFuelOnce(currentValue);
+		return total;
+	}, 0);
+	const answer2 = modules.reduce((accumulator, currentValue, currentIndex, array) => {
+		let total = accumulator + calculateFuelOnce(currentValue);
+		return total;
+}, 0);
+		console.log(`Total - part 1 is: ${answer1}`);
+		console.log(`Total - part 2 (refactored): ${answer2}`);
+
+});
+}
+
+day1();

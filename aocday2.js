@@ -6,8 +6,6 @@
 
 const fs = require("fs");
 
-const calculateFuelOnce = num => Math.floor((num / 3) - 2);
-
 function day2() {
 	fs.readFile("./intcode.txt", "utf-8", (err, data) => {
 		const intcode = data.toString();
