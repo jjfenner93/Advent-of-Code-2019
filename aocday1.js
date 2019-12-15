@@ -43,7 +43,6 @@ function totalFuelRequirements() {
 
 totalFuelRequirements();
 */
-
 function day1() {
 	fs.readFile("./day1.txt", "utf-8", (err, data) => {
 		const modules = data.toString().split("\n");
@@ -55,7 +54,7 @@ function day1() {
 	const answer2 = modules.reduce((accumulator, currentValue, currentIndex, array) => {
 		let total = accumulator + calculateFuelOnce(currentValue);
 		return total;
-}, 0);
+	}, 0);
 		console.log(`Total - part 1 is: ${answer1}`);
 		console.log(`Total - part 2 (refactored): ${answer2}`);
 
