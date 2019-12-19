@@ -44,19 +44,19 @@ function totalFuelRequirements() {
 totalFuelRequirements();
 */
 function day1() {
-	fs.readFile("./day1.txt", "utf-8", (err, data) => {
+	fs.readFile("./modules.txt", "utf-8", (err, data) => {
 		const modules = data.toString().split("\n");
 		const answer1 = modules.reduce((acc, currentValue, currentIndex, arr) => {
 		currentValue = parseInt(currentValue);
 		let total = acc + calculateFuelOnce(currentValue);
 		return total;
-	}, 0);
-	const answer2 = modules.reduce((accumulator, currentValue, currentIndex, array) => {
-		let total = accumulator + calculateFuelOnce(currentValue);
+	}, 0); //total can be another word for the function parameter 'accumulator' above.
+	const answer2 = modules.reduce((acc, currentValue, currentIndex, arr) => {
+		let total = acc + calculateFuelOnce(currentValue);
 		return total;
 	}, 0);
 		console.log(`Total - part 1 is: ${answer1}`);
-		console.log(`Total - part 2 (refactored): ${answer2}`);
+		console.log(`Total - part 2 (refactored): ${answer2}`); //WIP (Incorrect answer)
 
 });
 }

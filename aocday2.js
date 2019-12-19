@@ -14,7 +14,8 @@ function day2() {
 
 			if (num === "99") {
 				num = parseInt(num);
-				total += num;
+				total += num; //Gets all the 99 numbers and can perform
+						      //a calculation on them after parseInt.
 			}
 
 			return total;
