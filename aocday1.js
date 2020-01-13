@@ -53,7 +53,7 @@ function day1() {
 	}, 0); //total can be another word for the function parameter 'accumulator' above.
 	const answer2 = modules.reduce((acc, currentValue, currentIndex, arr) => {
 		let total = acc + calculateFuelOnce(currentValue);
-		return total;
+		return total; //Somehow access whatever has been accumulated and do calc.
 	}, 0);
 		console.log(`Total - part 1 is: ${answer1}`);
 		console.log(`Total - part 2 (refactored): ${answer2}`); //WIP (Incorrect answer)
