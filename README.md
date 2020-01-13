@@ -1,3 +1,4 @@
 # Advent-of-Code-2019
 Thankyou to https://adventofcode.com/
-The ongoing solutions...
+
+My solutions to them are here.
