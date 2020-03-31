@@ -11,7 +11,7 @@ const calculateFuelOnce = num => Math.floor((num / 3) - 2);
 /*
 // Old method below here without .reduce
 function storeAnswer(num) {
-    let quotient = calculateFuelOnce(num);
+    	let quotient = calculateFuelOnce(num);
 	let quotient2 = calculateFuelOnce(quotient);
 	let quotient3 = calculateFuelOnce(quotient2);
 	let quotient4 = calculateFuelOnce(quotient3);
@@ -20,7 +20,7 @@ function storeAnswer(num) {
 	let quotient7 = calculateFuelOnce(quotient6);
 	let quotient8 = calculateFuelOnce(quotient7);
 	let quotient9 = calculateFuelOnce(quotient8);
-    let arr = [num, quotient, quotient2, quotient3, quotient4, quotient5,
+    	let arr = [num, quotient, quotient2, quotient3, quotient4, quotient5,
 	quotient6, quotient7, quotient8, quotient9];
 	if (quotient9 <= 0) {
 		arr.pop();
@@ -32,7 +32,7 @@ function storeAnswer(num) {
 	}
 }
 
-function totalFuelRequirements() {
+function day1() {
 	let item;
 	let total = 0;
 	let addUpAllTheFuel = 0;
@@ -43,7 +43,8 @@ function totalFuelRequirements() {
 	setTimeout(() => {console.log(`Total - part 2 is: ${total}`)}, 1000);
 }
 
-totalFuelRequirements();
+day1();
+
 */
 
 function day1() {
