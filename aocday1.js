@@ -9,7 +9,7 @@ const fs = require('fs');
 const calculateFuelOnce = num => Math.floor((num / 3) - 2);
 
 /*
-// Another method I’ve done below here without .reduce
+// The first way I done below here without .reduce
 function storeAnswer(num) {
     	let quotient = calculateFuelOnce(num);
 	let quotient2 = calculateFuelOnce(quotient);
