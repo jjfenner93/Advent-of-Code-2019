@@ -13,7 +13,10 @@ function day2() {
 		const answer = intcodeArray.reduce((total, num) => {
 			if (num === "99") {
 				num = parseInt(num)
-				total += num // The num values that are 99 will be parsed to an integer for Maths calculations.
+
+				// The num values that are 99 will be parsed to an integer
+				// for Maths calculations.
+				total += num
 			}
 			return total
 		}, null)
