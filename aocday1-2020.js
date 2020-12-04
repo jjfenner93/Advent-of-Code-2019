@@ -17,10 +17,10 @@ i % 2 == 0 // Divides by 2 without a remainder.
 
 "use strict"
 
-const fs = require("fs")
+import { readFile } from "fs"
 
 function day1() {
-	fs.readFile("./report.txt", "utf-8", (err, data) => {
+	readFile("./report.txt", "utf-8", (err, data) => {
 		const modules = data.toString().split("\n")
 
 		modules.reduce((currentValue, index, arr) => {

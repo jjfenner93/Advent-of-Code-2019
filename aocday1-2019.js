@@ -4,7 +4,7 @@
 // Day 1 Part 1 & 2:
 "use strict"
 
-const fs = require("fs")
+import { readFile } from "fs"
 
 // The equation for calculating the fuel here first in an arrow function.
 const calculateFuelOnce = num => Math.floor((num / 3) - 2)
@@ -66,7 +66,7 @@ day1()
 
 // The solution in FP:
 function day1() {
-	fs.readFile("./modules.txt", "utf-8", (err, data) => {
+	readFile("./modules.txt", "utf-8", (err, data) => {
 
 		// Turns it into an array, by splitting out the new lines.
 		const modules = data.toString().split("\n")

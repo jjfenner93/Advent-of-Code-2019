@@ -4,12 +4,12 @@
 // Day 2:
 "use strict"
 
-const fs = require("fs")
+import { readFile } from "fs"
 
 function day2() {
-	fs.readFile("./intcode.txt", "utf-8", (err, data) => {
+	readFile("./intcode.txt", "utf-8", (err, data) => {
 		const intcode = data.toString()
-		const intcodeArray = intcode.split(",") // Turns it into an array.
+		const intcodeArray = intcode.split(",")
 		const answer = intcodeArray.reduce((total, num) => {
 			if (num === "99") {
 				num = parseInt(num)
