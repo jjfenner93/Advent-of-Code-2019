@@ -14,7 +14,6 @@ Find what two values in the array add up to 2020.
 i % 2 == 0 // Divides by 2 without a remainder.
 
 */
-
 "use strict"
 
 import { readFile } from "fs"
