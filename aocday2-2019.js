@@ -1,7 +1,3 @@
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//~Christmas 2019 - Advent of Code:~
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-// Day 2:
 "use strict"
 
 import { readFile } from "fs"
@@ -12,11 +8,8 @@ function day2() {
 		const intcodeArray = intcode.split(",")
 		const answer = intcodeArray.reduce((total, num) => {
 			if (num === "99") {
-				num = parseInt(num)
-
-				// The num values that are 99 will be parsed to an integer
-				// for Maths calculations.
-				total += num
+				parsedNum = parseInt(num)
+				total += parsedNum
 			}
 			return total
 		}, null)
